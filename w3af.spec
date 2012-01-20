@@ -1,11 +1,11 @@
 Name:           w3af
-Version:        1.0
+Version:        1.1
 Release:        %mkrel 1
 Summary:        Web Application Attack and Audit Framework
 Group:          Monitoring
 License:        GPLv2
 URL:            http://w3af.sourceforge.net/
-Source0:        http://sourceforge.net/projects/w3af/files/w3af/w3af%201.0-stable/w3af-%{version}-stable.tar.bz2
+Source0:        http://sourceforge.net/projects/w3af/files/w3af/w3af%201.0-stable/w3af-%{version}.tar.bz2
 Requires:       python-pysvn
 Requires:       python-nltk
 Requires:       python-soap
