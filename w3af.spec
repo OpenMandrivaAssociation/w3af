@@ -34,7 +34,7 @@ This is a gui for %{name}.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1 -b .shellbang~
+%patch0 -p1
 find . -name .svn | xargs rm -rf
 rm -f plugins/attack/payloads/code/netcat
 
