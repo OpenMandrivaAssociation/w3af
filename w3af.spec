@@ -72,7 +72,10 @@ install -m755 w3af_console.wrapper -D %{buildroot}%{_bindir}/w3af_console
 install -m755 w3af_gui.wrapper -D %{buildroot}%{_bindir}/w3af_gui
 
 %files
-%doc readme/*
+%doc readme/CHANGELOG readme/CONTRIBUTORS readme/README readme/TODO
+%doc readme/EN
+%lang(fr) %doc readme/FR
+%lang(ru) %doc readme/RU
 %{_datadir}/%{name}
 %{_bindir}/w3af_console
 %{_mandir}/man1/halberd.1*
