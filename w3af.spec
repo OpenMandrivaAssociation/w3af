@@ -36,6 +36,7 @@ This is a gui for %{name}.
 %setup -q -n %{name}
 %patch0 -p1 -b .shellbang~
 find . -name .svn | xargs rm -rf
+rm -f plugins/attack/payloads/code/netcat
 
 %build
 cat > w3af_console.wrapper <<EOF
