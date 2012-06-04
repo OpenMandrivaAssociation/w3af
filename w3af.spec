@@ -6,6 +6,7 @@ Group:          Monitoring
 License:        GPLv2
 URL:            http://w3af.sourceforge.net/
 Source0:        http://sourceforge.net/projects/w3af/files/w3af/w3af%201.0-stable/w3af-%{version}.tar.bz2
+Patch0:		w3af-fix-python-shellbang.patch
 Requires:       python-pysvn
 Requires:       python-nltk
 Requires:       python-soap
@@ -34,6 +35,7 @@ This is a gui for %{name}.
 
 %prep
 %setup -q -n w3af
+%patch0 -p1 -b .shellbang~
 find . -name .svn | xargs rm -rf
 
 %install
