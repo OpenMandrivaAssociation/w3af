@@ -66,6 +66,8 @@ cp -pr profiles %{buildroot}%{_datadir}/%{name}
 cp -pr scripts %{buildroot}%{_datadir}/%{name}
 cp -pr tools %{buildroot}%{_datadir}/%{name}
 
+mv %{buildroot}%{_datadir}/w3af/plugins/discovery/oHalberd/man/ %{buildroot}%{_datadir}/man
+
 install -m755 w3af_console.wrapper -D %{buildroot}%{_bindir}/w3af_console
 install -m755 w3af_gui.wrapper -D %{buildroot}%{_bindir}/w3af_gui
 
@@ -73,6 +75,7 @@ install -m755 w3af_gui.wrapper -D %{buildroot}%{_bindir}/w3af_gui
 %doc readme/*
 %{_datadir}/%{name}
 %{_bindir}/w3af_console
+%{_mandir}/man1/halberd.1*
 
 %files gui
 %{_bindir}/w3af_gui
