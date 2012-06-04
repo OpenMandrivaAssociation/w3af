@@ -7,6 +7,7 @@ License:	GPLv2
 URL:		http://w3af.sourceforge.net/
 Source0:	http://sourceforge.net/projects/w3af/files/w3af/w3af%201.0-stable/w3af-%{version}.tar.bz2
 Patch0:		w3af-fix-python-shellbang.patch
+Patch1:		w3af-1.1-add-scriptDir-path.patch
 Requires:	python-pysvn
 Requires:	python-nltk
 Requires:	python-soap
@@ -35,29 +36,16 @@ This is a gui for %{name}.
 %prep
 %setup -q -n %{name}
 %patch0 -p1
+%patch1 -p1 
 find . -name .svn | xargs rm -rf
 rm -f plugins/attack/payloads/code/netcat
 
 %build
-cat > w3af_console.wrapper <<EOF
-#!/bin/sh
-
-cd %{_datadir}/%{name}
-exec ./w3af_console
-EOF
-chmod +x w3af_console
-
-cat > w3af_gui.wrapper <<EOF
-#!/bin/sh
-
-cd %{_datadir}/%{name}
-exec ./w3af_gui
-EOF
-chmod +x w3af_gui.wrapper
 
 %install
-install -m755 w3af_console -D %{buildroot}%{_datadir}/%{name}/w3af_console
-install -m755 w3af_gui -D %{buildroot}%{_datadir}/%{name}/w3af_gui
+install -m755 w3af_console -D %{buildroot}%{_bindir}/w3af_console
+install -m755 w3af_gui -D %{buildroot}%{_bindir}/w3af_gui
+install -d %{buildroot}%{_datadir}/%{name}
 cp -pr core %{buildroot}%{_datadir}/%{name}
 cp -pr extlib %{buildroot}%{_datadir}/%{name}
 cp -pr locales %{buildroot}%{_datadir}/%{name}
@@ -67,9 +55,6 @@ cp -pr scripts %{buildroot}%{_datadir}/%{name}
 cp -pr tools %{buildroot}%{_datadir}/%{name}
 
 mv %{buildroot}%{_datadir}/w3af/plugins/discovery/oHalberd/man/ %{buildroot}%{_datadir}/man
-
-install -m755 w3af_console.wrapper -D %{buildroot}%{_bindir}/w3af_console
-install -m755 w3af_gui.wrapper -D %{buildroot}%{_bindir}/w3af_gui
 
 %files
 %doc readme/CHANGELOG readme/CONTRIBUTORS readme/README readme/TODO
