@@ -1,0 +1,22 @@
+--- w3af/w3af_console~	2012-06-04 19:01:41.223179262 +0200
++++ w3af/w3af_console	2012-06-04 19:01:42.335165360 +0200
+@@ -5,7 +5,7 @@ import gettext
+  
+ # First of all, we need to change the working directory to the directory of w3af.
+ currentDir = os.getcwd()
+-scriptDir = os.path.dirname(sys.argv[0]) or '.'
++scriptDir = "/usr/share/w3af/"
+ os.chdir( scriptDir )
+ 
+ def backToCurrentDir():
+--- w3af/w3af_gui~	2011-11-10 15:38:40.000000000 +0100
++++ w3af/w3af_gui	2012-06-04 19:01:46.561112528 +0200
+@@ -5,7 +5,7 @@ import gettext
+ 
+ # First of all, we need to change the working directory to the directory of w3af.
+ currentDir = os.getcwd()
+-scriptDir = os.path.dirname(sys.argv[0]) or '.'
++scriptDir = "/usr/share/w3af/"
+ os.chdir( scriptDir )
+ 
+ def backToCurrentDir():

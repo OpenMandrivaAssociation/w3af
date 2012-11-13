@@ -1,0 +1,16 @@
+--- w3af/extlib/SOAPpy/tests/esj_test_client.py.shellbang~	2012-06-04 18:38:42.997409456 +0200
++++ w3af/extlib/SOAPpy/tests/esj_test_client.py	2012-06-04 18:38:57.183232108 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/python
+ 
+ #standard imports
+ import syslog, sys
+--- w3af/extlib/SOAPpy/tests/esj_test_server.py.shellbang~	2012-06-04 18:38:34.023521644 +0200
++++ w3af/extlib/SOAPpy/tests/esj_test_server.py	2012-06-04 18:38:57.183232108 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/bin/python2
++#!/usr/bin/python
+ 
+ #standard imports
+ import syslog, sys
