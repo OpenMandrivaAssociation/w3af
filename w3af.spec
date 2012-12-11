@@ -11,7 +11,7 @@ Patch1:		w3af-1.1-add-scriptDir-path.patch
 Requires:	python-pysvn
 Requires:	python-nltk
 Requires:	python-soap
-Requires:	python-numarray
+Requires:	python-numpy
 Requires:	scapy
 BuildArch:	noarch
 
