@@ -1,6 +1,6 @@
 Name:		w3af
 Version:	1.1
-Release:	2
+Release:	3
 Summary:	Web Application Attack and Audit Framework
 Group:		Monitoring
 License:	GPLv2
