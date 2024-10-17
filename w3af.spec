@@ -4,7 +4,7 @@ Release:	3
 Summary:	Web Application Attack and Audit Framework
 Group:		Monitoring
 License:	GPLv2
-URL:		http://w3af.sourceforge.net/
+URL:		https://w3af.sourceforge.net/
 Source0:	http://sourceforge.net/projects/w3af/files/w3af/w3af%201.0-stable/w3af-%{version}.tar.bz2
 Patch0:		w3af-fix-python-shellbang.patch
 Patch1:		w3af-1.1-add-scriptDir-path.patch
